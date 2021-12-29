@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ul {
   list-style-type: none;
@@ -22,8 +23,8 @@ a {
 }
 body {
   background-color: #f6f9fe;
-  color: #545454;
-  font-family: 'Arial', sans-serif;
+  color: #5f5f5f;
+  font-family: 'Nunito', sans-serif;
 }
 .flex {
   display: flex;
@@ -34,10 +35,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2em 0;
-}
-header .logo {
-  width: 30%;
+  margin-top: 1.5em;
+  height: 70px;
 }
 header nav {
   width: 70%;
@@ -48,9 +47,15 @@ nav ul {
   align-items: center;
 }
 header a {
-  color: #545454;
+  color: #5f5f5f;
 }
 /* Main content */
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 170px);
+}
 .main-content {
   display: flex;
   justify-content: space-around;
@@ -81,9 +86,44 @@ header a {
 h1 {
   color: #353252;
   font-size: 4.5em;
-  margin-top: 0.5em;
+  margin-top: 30px;
+  line-height: 1.2;
 }
 p {
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: 1.2em;
+}
+form {
+  margin-top: 30px;
+}
+input[type=text] {
+  height: 58px;
+  margin-right: 10px;
+  width: 400px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+input[type=text]:focus {
+  outline: none;
+}
+input[type=submit] {
+  border: none;
+  font-size: 16px;
+}
+::placeholder {
+  color: #959393;
+  font-size: 1.2em;
+}
+/* Socials */
+.socials {
+  margin-top: 50px;
+}
+.socials p {
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.socials img {
+  margin-right: 1em;
+  visibility: hidden;
 }

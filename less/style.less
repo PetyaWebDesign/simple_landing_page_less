@@ -1,8 +1,120 @@
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Utility classes */
+.primary-btn {
+    background: @accent_color;
+    color: #fff;
+    padding: 1.3em;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.container{
+    width:@main_container;
+    margin: 0 auto;
+}
+
 // Variable colors
-@main_bgrd: #e1e1e1;
-@main_color: #181818;
+@main_bgrd: #f6f9fe;
+@main_color: #545454;
+@accent_color: #372865;
+
+// Variable size
+@main_container: 80%;
+
+// Variable font-families
+@main_font:'Arial', sans-serif;
 
 body {
     background-color: @main_bgrd;
     color:@main_color;
+    font-family: @main_font;
 }
+
+// Mixins
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Navigation
+header {
+    .flex;
+    padding: 2em 0;
+}
+
+header .logo {
+    width:30%;
+}
+
+header nav {
+    width:70%;
+}
+
+nav ul {
+    .flex;
+}
+
+header a {
+    color: @main_color;
+}
+
+/* Main content */
+.main-content {
+    .flex;
+    justify-content: space-between;
+}
+
+.main-content div:nth-child(1) {
+    width: 60%;
+}
+
+.main-content div:nth-child(2){
+    width: 40%;
+    text-align: right;
+}
+
+.main-content div:nth-child(2) img {
+    width:70%;
+}
+
+.subheading {
+    background: @accent_color;
+    color: #a79dc3;
+    padding: 0.8em 1.5em;
+    border-radius:50px;
+    display: inline-block;
+}
+
+.subheading a{
+    color:#a79dc3;
+    text-decoration: underline;
+}
+
+h1 {
+    color:#353252;
+    font-size: 4.5em;
+    margin-top:0.5em;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1.2em;
+}
+
+
+
+

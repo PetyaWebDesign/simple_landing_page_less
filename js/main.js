@@ -26,3 +26,10 @@ function revealAnimation() {
         .from(icons[5], { autoAlpha: 0, scale: 0.5 })
         .from(icons[6], { autoAlpha: 0, scale: 0.5 })
 }
+
+// Nav menu
+let hamburger = document.querySelector('.hamburger');
+hamburger.addEventListener('click', () => {
+    let nav = document.querySelector('.nav-menu');
+    nav.classList.toggle('active');
+});

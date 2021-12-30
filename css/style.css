@@ -134,9 +134,19 @@ input[type=submit] {
 /* Tablet */
 @media (max-width: 768px) {
   .hamburger {
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     cursor: pointer;
     z-index: 2;
+  }
+  .hamburger span {
+    width: 35px;
+    height: 4px;
+    background: #372865;
+    display: inline-block;
+    margin-bottom: 5px;
   }
   .active {
     display: flex;

@@ -174,9 +174,18 @@ input[type=submit] {
 @media(max-width:768px){
    
     .hamburger {
-      display:inline-block;
+      .flex;
+      flex-direction: column;
       cursor: pointer;
       z-index: 2;
+    }
+
+    .hamburger span {
+        width: 35px;
+        height: 4px;
+        background:@accent_color;
+        display: inline-block;
+        margin-bottom: 5px;
     }
 
     .active {

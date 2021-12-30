@@ -29,7 +29,17 @@ function revealAnimation() {
 
 // Nav menu
 let hamburger = document.querySelector('.hamburger');
+let box = [...document.querySelectorAll('.box')];
 hamburger.addEventListener('click', () => {
     let nav = document.querySelector('.nav-menu');
     nav.classList.toggle('active');
+    if (nav.classList.contains('active')) {
+        for (let el of box) {
+            el.style.background = 'white';
+        }
+    } else {
+        for (let el of box) {
+            el.style.background = '#372865';
+        }
+    }
 });

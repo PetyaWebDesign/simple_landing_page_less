@@ -134,7 +134,7 @@ form {
 }
 
 input[type=text] {
-    height: 58px;
+    height: 60px;
     margin-right: 10px;
     width: 400px;
     border: 1px solid #cccccc;
@@ -149,6 +149,7 @@ input[type=text]:focus {
 input[type=submit] {
     border: none;
     font-size: 16px;
+    -webkit-appearance: none;
 }
 
 ::placeholder{
@@ -234,8 +235,25 @@ nav ul li a {
 
     .main-content div:nth-child(1) {
         width: 100%;
+        text-align: center;
     }
 }
 
 
+/* Mobile */
+@media (max-width: 481px) {
+    main {
+        height: auto;
+    }
+    h1{
+        font-size: 2.5em;
+    }
 
+    input[type=text], input[type=submit] {
+        width: 100%;
+    }
+
+    input[type=submit] {
+        margin-top:5px;
+    }
+}

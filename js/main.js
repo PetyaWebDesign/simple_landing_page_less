@@ -37,9 +37,16 @@ hamburger.addEventListener('click', () => {
         for (let el of box) {
             el.style.background = 'white';
         }
+
+        gsap.to('.box1, .box3', {
+            x: 10
+        });
     } else {
         for (let el of box) {
             el.style.background = '#372865';
         }
+        gsap.to('.box1, .box3', {
+            x: 0
+        });
     }
 });
